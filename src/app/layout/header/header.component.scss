@@ -1,0 +1,17 @@
+header{
+    background-image: url('../../../assets/images/header.jpg');
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        text-align: center;
+        h1,p{
+            color: #fff;
+
+        }
+    }
+}
