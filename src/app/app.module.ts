@@ -18,6 +18,11 @@ import { MovieDetailsComponent } from './pages/movie-details/movie-details.compo
 import { FormsModule } from '@angular/forms';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as altHeart } from '@fortawesome/free-regular-svg-icons';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -32,17 +37,23 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     MoviesComponent,
     MovieDetailsComponent,
     SearchResultsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgbPaginationModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
     
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    library.add(faHeart,altHeart)
+  }
+}

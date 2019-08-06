@@ -15,6 +15,7 @@ export class MoviesListComponent implements OnInit {
     console.log(this.pagination);
     
   }
+  //navigate to the selected page
   onPageChange(t){
     console.log(t);
     this.route.navigate(['movies',t])

@@ -11,6 +11,7 @@ export class FavoritesComponent implements OnInit {
   constructor(private mvSrv:MovieService) { }
   movies:[];
   ngOnInit() {
+    //get the facorite movies list
     this.movies= this.mvSrv.getFavoriteMovies();
   }
 

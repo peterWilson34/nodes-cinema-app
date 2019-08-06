@@ -5,6 +5,7 @@ import { MoviesComponent } from './pages/movies/movies.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 import { SearchResultsComponent } from './pages/search-results/search-results.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   ]},
   {path:'movie/:id',component:MovieDetailsComponent},
   {path:'search',component:SearchResultsComponent},
-  {path:'favorites',component:FavoritesComponent}
+  {path:'favorites',component:FavoritesComponent},
+  {path:'error/:error_num/:error_msg',component:ErrorComponent}
 ];
 
 @NgModule({

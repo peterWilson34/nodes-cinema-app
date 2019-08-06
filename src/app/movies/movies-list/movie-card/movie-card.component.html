@@ -2,7 +2,7 @@
     <div class="row no-gutters">
         <div class="col-md-6 h-100">
         <img *ngIf="movie.poster_path" routerLink="/movie/{{movie.id}}" src="http://image.tmdb.org/t/p/w400/{{movie.poster_path}}" class="card-img" alt="{{movie.title}}">
-        <img *ngIf="!movie.poster_path" routerLink="/movie/{{movie.id}}" src="http://placehold.it/300x400" class="card-img h-100" alt="{{movie.title}}">
+        <img *ngIf="!movie.poster_path" routerLink="/movie/{{movie.id}}" src="../../../../assets/images/placeholder.png" class="card-img h-100" alt="{{movie.title}}">
         </div>
         <div class="col-md-6">
             <div class="card-body">
