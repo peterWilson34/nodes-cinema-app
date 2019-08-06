@@ -1,3 +1,7 @@
 <div class="container">
-    <app-movies-list></app-movies-list>
+    <h2 class="text-center mb-4">Most Popular Movies</h2>
+    <app-movies-list [movies]="popularMovies"></app-movies-list>
+    <div class="text-center">
+        <a routerLink="/movies" class="btn btn-link">Browse All Movies</a>
+    </div>
 </div>

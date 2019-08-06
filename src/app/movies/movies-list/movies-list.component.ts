@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies-list',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies-list.component.scss']
 })
 export class MoviesListComponent implements OnInit {
-
-  constructor() { }
+  @Input() movies;
+  @Input() pagination:{};
+  constructor(private route:Router) { }
 
   ngOnInit() {
+    console.log(this.pagination);
+    
   }
-
+  onPageChange(t){
+    console.log(t);
+    this.route.navigate(['movies',t])
+  }
 }

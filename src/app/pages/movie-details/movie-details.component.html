@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row mb-5">
+       
+        <div class="col-sm-4">
+            <img *ngIf="movie.poster_path"  src="http://image.tmdb.org/t/p/w400/{{movie.poster_path}}" class="card-img" alt="{{movie.title}}">
+            <img *ngIf="!movie.poster_path"  src="http://placehold.it/300x400" class="card-img h-100" alt="{{movie.title}}">
+        </div>
+        <div class="col-sm-8">
+            <h1 class="mb-5">{{movie.title}} <sub>{{movie.tagline}}</sub>   </h1>
+            <p>{{movie.overview}}</p>
+            <ul class="genres">
+                <li *ngFor="let genre of movie.genres">{{genre.name}}</li>
+            </ul>
+            <p class="card-text"><small class="text-muted">released on {{movie.release_date | date : 'dd, MMM yyyy'}}</small></p>
+            <div class="production">
+                <h3>Produced by</h3>
+                <ul class="production_companies">
+                    <li *ngFor="let comp of movie.production_companies">
+                        <img src="http://image.tmdb.org/t/p/w400/{{comp.logo_path}}" alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-danger" *ngIf="!isFav"  (click)="addToFavorites(movie)">Add to Favorite</button>
+            <button class="btn btn-light" *ngIf="isFav" (click)="removeFromFavorites(movie.id)">Remove From Favorite</button>
+        </div>
+    </div>
+</div>

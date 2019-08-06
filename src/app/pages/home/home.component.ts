@@ -9,11 +9,10 @@ import { MovieService } from '../../shared/services/movie.service';
 export class HomeComponent implements OnInit {
 
   constructor(private movieSrv:MovieService) { }
-
+  popularMovies:[];
   ngOnInit() {
-    this.movieSrv.getMovies().subscribe((data)=>{
-      console.log(data);
-      
+    this.movieSrv.getMostPopularMovies().subscribe((res)=>{
+      this.popularMovies = res.results.slice(0,6)      
     })
   }
 

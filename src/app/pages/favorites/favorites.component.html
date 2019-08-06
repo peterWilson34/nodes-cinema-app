@@ -1,0 +1,5 @@
+<div class="container">
+    <h2 class="text-center mb-4">Your Favorite Movies</h2>
+    <app-movies-list [movies]="movies" ></app-movies-list>
+    <h2 *ngIf="!movies.length" class="text-center text-danger mb-5">Unfortunately you don't have favorite movies</h2>
+</div>

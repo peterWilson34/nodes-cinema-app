@@ -1,1 +1,16 @@
-<app-movie-card></app-movie-card>
+<div class="row mb-5">
+    <div class="col-sm-6" *ngFor="let movie of movies">
+        <app-movie-card class="h-100" [movie]="movie"></app-movie-card>
+    </div>
+   
+    <ngb-pagination *ngIf="pagination"
+    [(page)]="pagination.page"
+    [pageSize]="pagination.pageSize"
+    [collectionSize]="pagination?.collectionSize"
+    [maxSize]="5" [boundaryLinks]="true"
+    (pageChange)="onPageChange(pagination.page)">
+        <ng-template ngbPaginationPrevious>Prev</ng-template>
+        <ng-template ngbPaginationNext>Next</ng-template>
+        <ng-template ngbPaginationNumber let-page >{{page}}</ng-template>
+    </ngb-pagination>
+</div>
