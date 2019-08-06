@@ -23,6 +23,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as altHeart } from '@fortawesome/free-regular-svg-icons';
 import { ErrorComponent } from './pages/error/error.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,22 @@ import { ErrorComponent } from './pages/error/error.component';
     HttpClientModule,
     NgbPaginationModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 40,
+      outerStrokeWidth: 6,
+      innerStrokeWidth: 3,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+      renderOnClick:false,
+      animation:false,
+      startFromZero:false,
+      showZeroOuterStroke:false,
+      lazy:false,
+      subtitle:'rating'
+    })
     
   ],
   providers: [MovieService],

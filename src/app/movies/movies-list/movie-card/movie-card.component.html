@@ -1,15 +1,20 @@
 <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col-md-6 h-100">
-        <img *ngIf="movie.poster_path" routerLink="/movie/{{movie.id}}" src="http://image.tmdb.org/t/p/w400/{{movie.poster_path}}" class="card-img" alt="{{movie.title}}">
-        <img *ngIf="!movie.poster_path" routerLink="/movie/{{movie.id}}" src="../../../../assets/images/placeholder.png" class="card-img h-100" alt="{{movie.title}}">
+               
+            <img *ngIf="movie.poster_path" routerLink="/movie/{{movie.id}}" src="http://image.tmdb.org/t/p/w400/{{movie.poster_path}}" class="card-img" alt="{{movie.title}}">
+            <img *ngIf="!movie.poster_path" routerLink="/movie/{{movie.id}}" src="../../../../assets/images/placeholder.png" class="card-img h-100" alt="{{movie.title}}">
         </div>
         <div class="col-md-6">
             <div class="card-body">
                 <h5 class="card-title" routerLink="/movie/{{movie.id}}">{{movie.title}}</h5>
+                
                 <p class="card-text">{{movie.overview | trim}} <a routerLink="/movie/{{movie.id}}">read more</a></p>
                 <p class="card-text"><small class="text-muted">released on {{movie.release_date | date : 'dd, MMM yyyy'}}</small></p>
-                
+                <circle-progress
+                [percent]="movie.vote_average*10"
+               
+              ></circle-progress>
             </div>
         </div>
     </div>
