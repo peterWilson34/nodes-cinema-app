@@ -3,7 +3,7 @@
        
         <div class="col-sm-4">
             <img *ngIf="movie?.poster_path"  src="http://image.tmdb.org/t/p/w400/{{movie?.poster_path}}" class="card-img" alt="{{movie?.title}}">
-            <img *ngIf="!movie?.poster_path"  src="assets/images/placeholder.png" class="card-img h-100" alt="{{movie?.title}}">
+            <img *ngIf="!movie?.poster_path"  src="/assets/images/placeholder.png" class="card-img h-100" alt="{{movie?.title}}">
             
         </div>
         <div class="col-sm-8">
