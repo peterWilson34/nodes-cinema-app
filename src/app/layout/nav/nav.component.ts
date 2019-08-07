@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-nav',
@@ -13,8 +14,9 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
   //get the search query and pass it to the search result page
-  onSearchSubmit(form){
+  onSearchSubmit(form: NgForm){
     let query = form.value.query;
+    form.reset(); //reset the form before navgiate
     if(query){ //check if the query has value
       this.router.navigate(['search'],{ queryParams: { query: query }})
     }

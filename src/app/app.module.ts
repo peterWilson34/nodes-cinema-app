@@ -50,18 +50,19 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FontAwesomeModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
-      radius: 40,
+      radius:30,
       outerStrokeWidth: 6,
       innerStrokeWidth: 3,
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
       renderOnClick:false,
-      animation:false,
-      startFromZero:false,
-      showZeroOuterStroke:false,
       lazy:false,
-      subtitle:'rating'
+      subtitle:'rating',
+      maxPercent:100,
+      space:2,
+      titleFontSize:'15',
+      unitsFontSize:'7'
     })
     
   ],
