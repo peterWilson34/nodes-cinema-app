@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Pagination } from '../../shared/interfaces/pagination';
 
 @Component({
   selector: 'app-movies-list',
@@ -8,16 +9,14 @@ import { Router } from '@angular/router';
 })
 export class MoviesListComponent implements OnInit {
   @Input() movies;
-  @Input() pagination:{};
+  @Input() pagination:Pagination;
   constructor(private route:Router) { }
 
   ngOnInit() {
-    console.log(this.pagination);
     
   }
   //navigate to the selected page
-  onPageChange(t){
-    console.log(t);
-    this.route.navigate(['movies',t])
+  onPageChange(p){
+    this.route.navigate(['movies',p])
   }
 }

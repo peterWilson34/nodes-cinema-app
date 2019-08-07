@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from 'src/app/shared/services/movie.service';
+import { Movie } from '../../shared/interfaces/movie';
 
 @Component({
   selector: 'app-movie-details',
@@ -10,7 +11,7 @@ import { MovieService } from 'src/app/shared/services/movie.service';
 export class MovieDetailsComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute,private movSrv:MovieService,private router:Router) { }
-  movie={};
+  movie:Movie;
   isFav :boolean;
   ngOnInit() {
     //listen to change in movie id

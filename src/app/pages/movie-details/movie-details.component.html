@@ -6,7 +6,13 @@
             <img *ngIf="!movie.poster_path"  src="../../../assets/images/placeholder.png" class="card-img h-100" alt="{{movie.title}}">
         </div>
         <div class="col-sm-8">
-            <h1 class="mb-5">{{movie.title}} <sub>{{movie.tagline}}</sub>   </h1>
+            <div class="heading mb-5">
+                <h1 class="mb-0">{{movie.title}}</h1>
+                <div class="tagline " *ngIf="movie.tagline">
+                    <p>{{movie.tagline}}</p>
+                </div>
+            </div>
+            
             <div class="text-right mb-5">
                 <button class="btn btn-danger pull-right" *ngIf="!isFav"  (click)="addToFavorites(movie)">Add to Favorite <fa-icon [icon]="['far', 'heart']"></fa-icon></button>
                 <button class="btn btn-light  pull-right" *ngIf="isFav" (click)="removeFromFavorites(movie.id)">Remove From Favorite <fa-icon [icon]="['fas', 'heart']"></fa-icon></button>
