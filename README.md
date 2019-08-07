@@ -6,22 +6,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## APP walkthrough
 
-## Running end-to-end tests
+- In the homepage user should find a list of the latest most popular movies.
+- User can browse all movies by go to movies page by clicking on `browse all movies` button or by clicking on `movies` link on the main top navigation.
+- At movies page the user can see a list of all available movies with a pagination at the end of each page.
+- User can click on poster image, title or read more link to go to movie details page.
+- On movie details page user can see more details and also on the top right corner he can add the current movie to his favorties list by clicking ond the button on the top right corner of the page.
+- User can go to his favorite movies list by clicking on Favorites link on the main top navigation.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Development Environment:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Node 10.16.1
+- Angular 8.2.0
+- OS Linux Ubuntu 18.04
+- IDE Visual Studio Code
