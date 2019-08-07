@@ -1,5 +1,6 @@
 export interface Movie {
     poster_path:string,
+    backdrop_path:string,
     title:string,
     tagline:string,
     overview:string,
