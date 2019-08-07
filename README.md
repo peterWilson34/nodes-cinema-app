@@ -10,6 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+if you want to support Githubpages you have to set the base-href and delpoy-url like the following `ng build --prod --base-href /nodes-cinema-app/  --deploy-url /nodes-cinema-app/`
 
 ## APP walkthrough
 
