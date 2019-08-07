@@ -1,5 +1,7 @@
 <div class="container">
     <h2 class="text-center mb-4">Search Results for <b>{{query}}</b></h2>
+    <div class="no-results my-5 text-center" *ngIf="!results.length">
+        <h2 class="text-danger">Sorry, there is no movies matches your search!</h2>
+    </div>
     <app-movies-list [movies]="results" [pagination]="pagination"></app-movies-list>
-    
 </div>
